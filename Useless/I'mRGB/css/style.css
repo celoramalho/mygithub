@@ -22,20 +22,26 @@ margin: 0;
 @keyframes cores{
 	0% {
 		background: #FF0000;
-	}20%{
+	}14%{
 		background: orange;
 	}
-	40%{
-		background: yellow;	
+	28%{
+		background: yellow;
 	}
-	60%{
+	42%{
 		background: lime;
 	}
-	80%{
+	56%{
 		background: #007FFF;
 	}
+	70%{
+		background: #FF68C4;
+	}
+	84%{
+		background: #ab47bc;
+	}
 	100%{
-		background: #ab47bc;	
+		background: #FF0000;
 	}
 
 
