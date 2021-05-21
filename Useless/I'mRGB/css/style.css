@@ -1,0 +1,41 @@
+body{
+	animation: 	cores;
+	animation-duration: 	4s;
+	animation-iteration-count: 	infinite;
+margin: 0;
+}
+
+h1{
+	font-family: Impact, fantasy;
+	font-size: 20vw;
+	color:#fff;
+	margin: auto;
+
+}
+.yeah{
+display:flex;
+height: 100vh;
+margin: 0;
+
+}
+@keyframes cores{
+	0% {
+		background: #FF0000;
+	}20%{
+		background: orange;
+	}
+	40%{
+		background: yellow;	
+	}
+	60%{
+		background: lime;
+	}
+	80%{
+		background: #007FFF;
+	}
+	100%{
+		background: #ab47bc;	
+	}
+
+
+}
