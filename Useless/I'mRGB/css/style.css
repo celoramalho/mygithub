@@ -2,7 +2,7 @@ body{
 	animation: 	cores;
 	animation-duration: 	4s;
 	animation-iteration-count: 	infinite;
-margin: 0;
+	margin: 0;
 }
 
 h1{
@@ -14,12 +14,12 @@ h1{
 
 }
 .yeah{
-display:flex;
-align-items: center;
-justify-content: center;
-height: 100vh;
-width: 100vw;
-margin: 0;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
 
 }
 @keyframes cores{
