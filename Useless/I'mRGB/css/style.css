@@ -6,15 +6,17 @@ margin: 0;
 }
 
 h1{
-	font-family: Impact, fantasy;
-	font-style: normal;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
 	font-size: 15vw;
+	font-style: normal;
 	color:#fff;
 	margin: auto;
 
 }
 .yeah{
 display:flex;
+align-items: center;
+justify-content: center;
 height: 100vh;
 margin: 0;
 
