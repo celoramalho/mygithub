@@ -24,19 +24,19 @@ body{
 .rgb{
     background-color: rgb(236, 133, 133);
 }
-.curriculo a{
+.op1{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
 	font-size: min(100px,10vw);
     text-decoration: none;
-	color:#295288;
+	color:#84d5ee;
 	margin: 0px;
 	padding: 0px;
 }
-.curriculo a:hover{
-	color:#4b66dd;
+.op1:hover{
+	color:#303e79;
 }
 
-.rgb a{
+.op2{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
 	font-size: min(100px,10vw);
     text-decoration: none;
@@ -44,6 +44,6 @@ body{
 	margin: 0px;
 	padding: 0px; 
 }
-.rgb a:hover{
-	color:#46bd6a;
+.op2:hover{
+	color:#97ffb6;
 }
