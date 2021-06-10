@@ -33,7 +33,7 @@ html,body{
 	scroll-behavior: smooth;
 }
 body{
-	background-color: green;/* para testar */
+	background-color: #eeeeee;;/* para testar */
 }
 /*body:hover {overflow-y:scroll;}*/
 * {
@@ -165,6 +165,11 @@ header{
 	background: linear-gradient(#202020bb,rgba(14, 77, 139, 0.726)),url(../img/wallpaper-home.jpg);
 	background-size: cover;
 	background-position: center;
+	transition: 1s;
+}
+.scrolado{
+	transition: 1s;
+	border-bottom-right-radius: 150px;
 }
 .mr-circle{
 	display: flex;
@@ -268,6 +273,12 @@ header{
 	width: 100%;
 	padding: 10px;
 	background-color: #eeeeee;
+	transition: 1s;
+}
+.scrolado-projetos{
+	transition: 1s;
+	box-shadow:  -2px 4px 2px -2px #36363634;
+	border-bottom-left-radius: 150px;
 }
 .container-projetos{
 	display: flex;
@@ -308,70 +319,57 @@ header{
 
 
 /* ======================Useless====================== */
+
 #useless-section{
+	display: flex;
+	margin-top: 10px;
 	height: 100vh;
-	width: 100%;
 	padding: 10px;
 	background-color: #eeeeee;
 }
-.container-useless{
 
-	margin-top: 60px;
-	margin-left: 100px;
-}
-.container-useless-content{
-	margin-top: 40px;
-	margin-left: 150px;
+.container-useless{
+	width: 90%;
+	margin: 50px auto;
 }
 .container-useless-projetos{
 	display: flex;
-	justify-content: center;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-flow: wrap;
 }
 .container-useless-projetos a{
-	text-decoration: none;
-	}
-.projeto-useless-1{
-	width: 180px;
-	height: 180px;
+text-decoration: none;
+}
+.circle-useless{
+	width: 100px;
+	height: 100px;
 	margin: 0 auto;
 	border-radius: 100%;
 	background: url(../img/projeto-useless-1.png);
 	background-size: cover;
 	background-position: center;
 }
-.projeto-useless-2{
-	width: 180px;
-	height: 180px;
-	margin: 0 auto;
-	border-radius: 100%;
-	background: url(../img/projeto-useless-1.png);
-	background-size: cover;
-	background-position: center;
-}
-.projeto-useless-3{
-	width: 180px;
-	height: 180px;
-	margin: 0 auto;
-	border-radius: 100%;
-	background: url(../img/projeto-useless-1.png);
-	background-size: cover;
-	background-position: center;
+.body-card{
+	padding: 10px 10px;
 }
 
 .rgb:hover .projetos-titulo{
 	animation: cores;
-	animation-duration: 4s;
+	animation-duration: 9s;
 	animation-iteration-count: infinite;
 	margin: 0;
 }
 .projetos-useless{
-	height: 350px;
-	width: 300px;
-	padding-top:20px;
-	border-radius: 2px;
-	box-shadow:  0px 0px 8px 0px #36363675;
-	display: block;
-	
+	width: 23%;
+	border-radius: 4px;
+	border:  1px solid #8990971c;
+	margin-bottom: 50px;
+	transition: 0.3s;
+}
+.projetos-useless:hover{
+	transform: scale(1.05);
+	box-shadow:  0px 0px 8px 0px #36363633;
 }
 .projetos-resumo{
 	text-align: center;
@@ -380,9 +378,7 @@ header{
 	font-weight: 400;
 	color:rgb(49, 49, 49);
 }
-.link-useless{
-	margin: 10px;
-}
+
 .projetos-titulo{
 	text-align: center;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
@@ -404,6 +400,43 @@ header{
 	color:#db61b7;
 }
 /* =============================================== */
+@media screen and (max-width: 1000px) {
+	.projetos-useless{
+		width: 40%;
+	}
+
+	.name-home h1{
+		font-size: 13vw;
+	}
+	.name-home h2{
+		font-size: 4vw;
+	}
+	.logo-github{
+		font-size: 30vw;
+		max-width: 100px;
+	}
+	.buttonhome-tosobremim{
+		width: 15vw;
+		height: 15vw;
+	}
+	.buttonhome-tosobremim::before,
+	.buttonhome-tosobremim::after{
+		height: 4vw;
+		width: 4vw;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.container-useless{
+		width: 100%;
+	}
+	.projetos-useless{
+		width: 80%;
+	}
+}
+
+
+
 @keyframes scroll-buttom{
 
 	0%{
@@ -479,3 +512,12 @@ header{
 	
 	
 	}
+
+@keyframes animacaoBottomFade{
+	from{
+	opacity: 0;
+	}
+	to{
+	opacity: 1;
+	}
+}
