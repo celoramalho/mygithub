@@ -535,6 +535,8 @@ text-decoration: none;
 		height: 4vw;
 		width: 4vw;
 	}
+	.projetos-websitespessoais{
+		width: 90%;
 }
 
 @media screen and (max-width: 650px) {
