@@ -244,7 +244,7 @@ header{
 	margin-right: auto;
 }
 .buttonhome-tosobremim:hover{
-	 background-color: blanchedalmond; 
+	background-color: blanchedalmond; 
  	opacity: 1; 
 }
 .buttonhome-tosobremim::before,
@@ -269,7 +269,7 @@ header{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
+	height: 100%;
 	width: 100%;
 	padding: 10px;
 	background-color: #eeeeee;
@@ -280,17 +280,7 @@ header{
 	box-shadow:  -2px 4px 2px -2px #36363634;
 	border-bottom-left-radius: 150px;
 }
-.container-projetos{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.bloquinho{
-	display: flex;
-	margin: 0vw;
-	margin-top: 10px;;
-	padding: 2px;
-}
+
 
 .meu-curriculo{
 	display: flex;
@@ -316,6 +306,123 @@ header{
 
 /* =============================================== */
 
+#websitespessoais-section{
+	display: flex;
+	margin-top: 10px;
+	width: 100vw;
+	height: 100%;
+	padding: 10px;
+	background-color: #eeeeee;
+}
+.container-websitespessoais{
+	width: 90%;
+	height: 100%;
+	margin: 50px auto;
+
+}
+.container-websitespessoais-cards{
+	display: flex;
+	height: 100%;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-flow: wrap;
+}
+
+.container-websitespessoais-cards a{
+text-decoration: none;
+}
+.link-websitespessoais{
+	width: 100%;
+	height: 100%;
+}
+.body-card{
+	padding: 10px 10px;
+}
+
+.rgb:hover .projetos-titulo{
+	animation: cores;
+	animation-duration: 9s;
+	animation-iteration-count: infinite;
+	margin: 0;
+}
+.projetos-websitespessoais{
+	width: 70%;
+	height: 35vw;
+	border-radius: 4px;
+	padding-top: 0;
+	/* padding-bottom: 33%; */
+	margin-bottom: 50px;
+	transition: 0.3s;
+}
+
+.projetos-websitespessoais:hover{
+	transform: scale(1.05);
+	box-shadow:  0px 0px 8px 0px #36363633;
+}
+
+.websitepessoal1{
+	background: url(../img/websitepessoal1.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.resto{
+	width: 100%;
+	height: 89%;
+}
+
+.info-card-websitespessoais{
+	width: 15%;
+	height: 0;
+	display: flex;
+	align-items: center;
+	clip-path: polygon(100% 0, 100% 0, 70% 100%, 0% 100%, 0 49%, 0% 0%);
+	padding: 3%;
+	border-top-left-radius: 4px;
+	background-color: #5a5a5ad2;
+
+}
+
+.num-websitespessoais-card{
+	text-align: center;
+	display: block;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.534);
+	text-shadow: 2px 2px 2px #ababab70;
+
+	font-weight: 800;
+	font-size: 30px;
+}
+.hideweb{
+	display: none;
+	text-align: center;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.534);
+	margin-left: 10px;
+	text-shadow: 1px 1px 3px #ababab;
+	font-weight: 800;
+	font-size: 20px;
+}
+.projetos-websitespessoais:hover .info-card-websitespessoais{
+	transition: 1s;
+	clip-path: polygon(100% 0, 80% 0, 70% 100%, 0% 100%, 0 49%, 0% 0%);
+	width: 70%;
+}
+.projetos-websitespessoais:hover .num-websitespessoais-card{
+	transition: 1s;
+
+}
+.projetos-websitespessoais:hover .hideweb{
+	display: block;
+	animation: colorcardtitle 2s ;
+	
+}
+#websitespessoais-section .resumo-titulodasection{
+ color: rgb(48, 131, 131);
+ margin-bottom: 2%;
+}
+
 
 
 /* ======================Useless====================== */
@@ -327,7 +434,6 @@ header{
 	padding: 10px;
 	background-color: #eeeeee;
 }
-
 .container-useless{
 	width: 90%;
 	margin: 50px auto;
@@ -338,6 +444,8 @@ header{
 	justify-content: space-around;
 	flex-flow: wrap;
 }
+
+
 .container-useless-projetos a{
 text-decoration: none;
 }
@@ -388,7 +496,7 @@ text-decoration: none;
 	color:#5a5a5a;
 
 }
-.container-useless h2{
+.titulo-section{
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
 	font-size: 50px;
 	color:#525252;
@@ -397,6 +505,9 @@ text-decoration: none;
 	font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	font-size: 30px;
 	font-weight: 1000;
+	
+}
+#useless-section .resumo-titulodasection{
 	color:#db61b7;
 }
 /* =============================================== */
@@ -434,7 +545,17 @@ text-decoration: none;
 		width: 80%;
 	}
 }
-
+@keyframes colorcardtitle {
+	0%{
+		color: transparent;
+		text-shadow: none;
+	}
+	100%{
+		rgba(255, 255, 255, 0.534);
+		text-shadow: 1px 1px 3px #ababab;
+	}
+	
+}
 
 
 @keyframes scroll-buttom{
