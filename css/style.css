@@ -35,6 +35,11 @@ html,body{
 body{
 	background-color: #eeeeee;;/* para testar */
 }
+.menu-mobile{
+	background-color: red;
+	height: 100vh;
+	width: 100vw;
+}
 /*body:hover {overflow-y:scroll;}*/
 * {
 	margin: 0;
@@ -154,9 +159,17 @@ header{
 	background-color: #FBFBF8;
 	margin: 5px;
 	transition: all 0.3s ease;
-
-
 }
+.toggle .line1{
+	transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+	opacity: 0;
+}
+.toggle .line3{
+	transform: rotate(45deg) translate(-5px,-6px);
+}
+
 /* =============================================== */
 /* =================== Home :) =================== */
 #section-home{
@@ -347,17 +360,17 @@ text-decoration: none;
 }
 .projetos-websitespessoais{
 	width: 70%;
-	height: 35vw;
+	height: 0;
 	border-radius: 4px;
 	padding-top: 0;
-	/* padding-bottom: 33%; */
+	padding-bottom: 35%;
 	margin-bottom: 50px;
 	transition: 0.3s;
 }
 
 .projetos-websitespessoais:hover{
 	transform: scale(1.05);
-	box-shadow:  0px 0px 8px 0px #36363633;
+	box-shadow:  0px 0px 8px 0px #3636367c;
 }
 
 .websitepessoal1{
@@ -365,12 +378,8 @@ text-decoration: none;
 	background-size: cover;
 	background-position: center;
 }
-.resto{
-	width: 100%;
-	height: 89%;
-}
-
 .info-card-websitespessoais{
+	transition: 1s;
 	width: 15%;
 	height: 0;
 	display: flex;
@@ -389,11 +398,11 @@ text-decoration: none;
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.534);
 	text-shadow: 2px 2px 2px #ababab70;
-
 	font-weight: 800;
-	font-size: 30px;
+	font-size: 2vw;
 }
 .hideweb{
+	transition: 1s;
 	display: none;
 	text-align: center;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
@@ -402,7 +411,7 @@ text-decoration: none;
 	margin-left: 10px;
 	text-shadow: 1px 1px 3px #ababab;
 	font-weight: 800;
-	font-size: 20px;
+	font-size: 1.5vw;
 }
 .projetos-websitespessoais:hover .info-card-websitespessoais{
 	transition: 1s;
@@ -430,7 +439,7 @@ text-decoration: none;
 #useless-section{
 	display: flex;
 	margin-top: 10px;
-	height: 100vh;
+	height: 100%;
 	padding: 10px;
 	background-color: #eeeeee;
 }
@@ -510,8 +519,65 @@ text-decoration: none;
 #useless-section .resumo-titulodasection{
 	color:#db61b7;
 }
+
+.rodape{
+	display: block;
+	height: 200px;
+	margin: 0 auto;
+	background:linear-gradient(#6610f2, #4b0caf);
+}
+.rodape a{
+	margin: 0 auto;
+	padding-top: 5px;
+	text-decoration: none;
+	color: #1e004e;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
+	text-align: center;
+	font-weight: 1000;
+}
 /* =============================================== */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
+	body{
+		overflow-x: hidden;
+	}
+	header{
+		position: fixed;
+	}
+	.navbar-links{
+		position: fixed;
+		left: 0px;
+		height: 92vh;
+		min-width: 40vw;
+		top: 8vh;
+		background-color: rgba(68, 68, 68, 0.486);
+		display: flex;
+		flex-direction: column; /*coluna: colum; */
+		align-items: center;
+		width: 100px;
+		transition: all 0.3s ease;
+		transform: translateX(-100%);
+	}
+	.navbar-links li{
+		opacity: 0;
+	}
+	.navbar-links li a{
+		font-size: 50px;
+		color: #FBFBF8;
+	}
+	.navbar-links li a:hover {
+		color: aqua;
+		font-size: 50px;
+		/* border-bottom-color: #FBFBF8; */
+		border-bottom-right-radius: 1px;
+		border-bottom-left-radius: 1px;
+		 /* colocar animação */
+	}
+	.burger{
+		display: block;
+	}
+	.navbar{
+		background-color: rgb(68, 68, 68);
+	}
 	.projetos-useless{
 		width: 40%;
 	}
@@ -536,8 +602,14 @@ text-decoration: none;
 		width: 4vw;
 	}
 	.projetos-websitespessoais{
-		width: 90%;
+		width: 100%;
+		height: 45vw;
+	}
+	.navbar-ativo{
+		transform: translateX(0%);
+	}
 }
+
 
 @media screen and (max-width: 650px) {
 	.container-useless{
@@ -545,6 +617,16 @@ text-decoration: none;
 	}
 	.projetos-useless{
 		width: 80%;
+	}
+}
+@keyframes navLinkFade{
+	from{
+		opacity: 0;
+		transform: translateX(-50px);	
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0px);
 	}
 }
 @keyframes colorcardtitle {
