@@ -4,6 +4,8 @@ const navbarSlide = () => {
 	const nav = document.querySelector('.navbar-links')
 	const navLinks = document.querySelectorAll('.navbar-links li');
 	const navLinksA = document.querySelectorAll('.barra-item');
+	const navLinksAB = document.getElementsByClassName('.barra-item');
+	
 
 
 	burger.addEventListener('click', () => {
@@ -20,7 +22,8 @@ const navbarSlide = () => {
 		//Burger Animation
 		burger.classList.toggle('toggle')
 	});
-	
+
+
 	for (let i = 0; i < navLinksA.length; i++) {
 		navLinksA[i].addEventListener("click", function() {
 			//console.log(i)

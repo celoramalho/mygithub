@@ -635,7 +635,7 @@ text-decoration: none;
 		text-shadow: none;
 	}
 	100%{
-		rgba(255, 255, 255, 0.534);
+		color: rgba(255, 255, 255, 0.534);
 		text-shadow: 1px 1px 3px #ababab;
 	}
 	
