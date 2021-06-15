@@ -557,6 +557,7 @@ text-decoration: none;
 }
 .link-rodape{
 	display: flex;
+	align-items: center;
 	width: 25%;
 	margin: 0 auto;
 	padding-top: 3%;
@@ -564,7 +565,7 @@ text-decoration: none;
 }
 
 .link-a{
-	width: 100%;
+	margin: 0 auto;
 	text-decoration: none;
 	color: white;
 	border-bottom: 1px solid transparent;
