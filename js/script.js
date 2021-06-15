@@ -4,7 +4,6 @@ const navbarSlide = () => {
 	const nav = document.querySelector('.navbar-links')
 	const navLinks = document.querySelectorAll('.navbar-links li');
 	const navLinksA = document.querySelectorAll('.barra-item');
-	const navLinksAB = document.getElementsByClassName('.barra-item');
 	
 
 
